@@ -5,11 +5,12 @@ function insert_Row() {
 	
 	const leftCol = document.createElement("td");
 	leftCol.innerText="New Cell1";
-	const reightCol = document.createElement("td");
-	reightCol.innerText="New Cell2";
+	const rightCol = document.createElement("td");
+	rightCol.innerText="New Cell2";
 	
 	newRow.appendChild(leftCol);
-	newRow.appendChild(reightCol);
-	table.appendChild(newRow);
+	newRow.appendChild(rightCol);
+     const target = table.firstElementChild;
+	target.insertBefore(newRow,target.children[0]);
 	return;
 }
